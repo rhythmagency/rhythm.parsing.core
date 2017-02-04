@@ -39,7 +39,7 @@
         /// <returns>
         /// The double, if it could be parsed; otherwise, null.
         /// </returns>
-        private double? AttemptParseDouble(string value)
+        public static double? AttemptParseDouble(string value)
         {
             if (value == null)
             {
