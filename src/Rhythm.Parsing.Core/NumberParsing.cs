@@ -30,6 +30,27 @@
                 : default(int?);
         }
 
+        /// <summary>
+        /// Attempts to parse a double.
+        /// </summary>
+        /// <param name="value">
+        /// The string representation of the double.
+        /// </param>
+        /// <returns>
+        /// The double, if it could be parsed; otherwise, null.
+        /// </returns>
+        private double? AttemptParseDouble(string value)
+        {
+            if (value == null)
+            {
+                return null;
+            }
+            var parsed = default(double);
+            return double.TryParse(value ?? string.Empty, out parsed)
+                ? parsed
+                : default(double?);
+        }
+
         #endregion
 
     }
