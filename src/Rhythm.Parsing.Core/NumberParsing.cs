@@ -51,6 +51,27 @@
                 : default(double?);
         }
 
+        /// <summary>
+        /// Attempts to parse a decimal.
+        /// </summary>
+        /// <param name="value">
+        /// The string representation of the decimal.
+        /// </param>
+        /// <returns>
+        /// The decimal, if it could be parsed; otherwise, null.
+        /// </returns>
+        public static decimal? AttemptParseDecimal(string value)
+        {
+            if (value == null)
+            {
+                return null;
+            }
+            var parsed = default(decimal);
+            return decimal.TryParse(value ?? string.Empty, out parsed)
+                ? parsed
+                : default(decimal?);
+        }
+
         #endregion
 
     }
