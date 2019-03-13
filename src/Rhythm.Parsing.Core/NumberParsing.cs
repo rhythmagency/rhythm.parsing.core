@@ -57,6 +57,27 @@
         }
 
         /// <summary>
+        /// Attempts to parse a long.
+        /// </summary>
+        /// <param name="value">
+        /// The string version of the long.
+        /// </param>
+        /// <returns>
+        /// The long, if it could be parsed; otherwise, null.
+        /// </returns>
+        public static long? AttemptParseLong(string value)
+        {
+            if (value == null)
+            {
+                return null;
+            }
+            var tempLong = default(long);
+            return long.TryParse(value, out tempLong)
+                ? tempLong
+                : default(long?);
+        }
+
+        /// <summary>
         /// Attempts to parse a double.
         /// </summary>
         /// <param name="value">

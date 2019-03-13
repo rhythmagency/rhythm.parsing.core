@@ -21,7 +21,9 @@ Install with NuGet. Search for "Rhythm.Parsing.Core".
 ## NumberParsing
 
 * **AttemptParseInt** Attempts to parse a string as an integer.
+* **AttemptParseLong** Attempts to parse a string as a long.
 * **AttemptParseDouble** Attempts to parse a string as a double.
+* **AttemptParseDecimal** Attempts to parse a string as a decimal.
 
 ## UrlParsing
 
